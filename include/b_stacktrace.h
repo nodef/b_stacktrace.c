@@ -23,11 +23,11 @@ b_stacktrace_handle b_stacktrace_get();
     can be expanded to a string via b_stacktrace_to_string.
     The handle is allocated with `malloc` and needs to be freed with `free`
 
-b_stacktrace_to_string(b_stacktrace_handle stacktrace);
+char* b_stacktrace_to_string(b_stacktrace_handle stacktrace);
     Converts a stack-trace handle to a human-readable string.
     The string is allocated with `malloc` and needs to be freed with `free`
 
-B_STACKTRACE_API int b_stacktrace_depth(b_stacktrace_handle stacktrace);
+int b_stacktrace_depth(b_stacktrace_handle stacktrace);
     Returns the number of entries (frames) in the stack-trace handle.
 
 
