@@ -1,0 +1,15 @@
+{
+  "name": "b_stacktrace.c",
+  "version": "1.2025.9",
+  "description": "A minimalistic single-header multi-platform C89 lib for stack tracing; Borislav Stanimirov (2020).",
+  "keywords": ["c", "library", "stacktrace", "backtrace", "debugging", "error handling"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/b_stacktrace.c.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodef/b_stacktrace.c/issues"
+  },
+  "homepage": "https://github.com/nodef/b_stacktrace.c#readme"
+}
