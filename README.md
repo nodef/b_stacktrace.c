@@ -2,17 +2,51 @@
 
 A minimalistic single-header multi-platform C89 lib for stack tracing, by [Borislav Stanimirov](https://github.com/iboB).
 
+<br>
+
 ## Installation
 
 Run:
-```bash
+
+```sh
 $ npm i b_stacktrace.c
 ```
 
 And then include `b_stacktrace.h` as follows:
+
 ```c
-#include "node_modules/b_stacktrace.c/include/b_stacktrace.h"
+// main.c
+#define B_STACKTRACE_IMPL  // or B_STACKTRACE_IMPLENTATION
+#include "node_modules/b_stacktrace.c/b_stacktrace.h"
+
+int main() { /* ... */ }
 ```
+
+And then compile with `clang` or `gcc` as usual.
+
+```bash
+$ clang main.c  # or, use gcc
+$ gcc   main.c
+```
+
+You may also use a simpler approach:
+
+```c
+// main.c
+#define B_STACKTRACE_IMPL  // or B_STACKTRACE_IMPLENTATION
+#include <b_stacktrace.h>
+
+int main() { /* ... */ }
+```
+
+If you add the path `node_modules/b_stacktrace.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/b_stacktrace.c main.c  # or, use gcc
+$ gcc   -I./node_modules/b_stacktrace.c main.c
+```
+
+<br>
 
 ## Usage
 
@@ -31,6 +65,8 @@ Including `b_stacktrace.h` provides:
 
 *TBD*
 
+<br>
+
 ## Examples
 
 The subdirectory `example/` contains several small examples:
@@ -38,6 +74,8 @@ The subdirectory `example/` contains several small examples:
 * `trace.c` - creates a trace from a C program
 * `trace.cpp` - creates a trace from a C++ program, demonstrating more complex symbols (classes, templates)
 * `crash.c` - example usage of the provided stack trace: as a crash handler
+
+<br>
 
 ## License
 
@@ -47,6 +85,6 @@ The library is distributed under the [MIT Software License](http://opensource.or
 <br>
 
 
+[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/iboB/b_stacktrace)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/b_stacktrace.c)
-[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/iboB/b_stacktrace)

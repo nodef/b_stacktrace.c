@@ -1,6 +1,6 @@
 {
   "name": "b_stacktrace.c",
-  "version": "1.2025.9",
+  "version": "1.2025.10",
   "description": "A minimalistic single-header multi-platform C89 lib for stack tracing; Borislav Stanimirov (2020).",
   "keywords": [
     "c",
@@ -19,5 +19,9 @@
     "url": "git+https://github.com/nodef/b_stacktrace.c.git"
   },
   "license": "MIT",
-  "main": "b_stacktrace.h"
+  "author": "wolfram77@gmail.com",
+  "main": "b_stacktrace.h",
+  "scripts": {
+    "test": "bash build.sh test"
+  }
 }
