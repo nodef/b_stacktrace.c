@@ -1,6 +1,6 @@
 {
   "name": "b_stacktrace.c",
-  "version": "1.2025.10",
+  "version": "1.2025.11",
   "description": "A minimalistic single-header multi-platform C89 lib for stack tracing; Borislav Stanimirov (2020).",
   "keywords": [
     "c",
